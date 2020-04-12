@@ -1,0 +1,23 @@
+{
+  "name": "readme-gen",
+  "version": "1.0.0",
+  "description": "github readme gen",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbrandona119/readme-gen.git"
+  },
+  "author": "jbrandona119 <jbrandona119@gmail.com> (http://jbrandona119.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbrandona119/readme-gen/issues"
+  },
+  "homepage": "https://github.com/jbrandona119/readme-gen#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.1.0"
+  }
+}
