@@ -1,26 +1,25 @@
-# llksdjf
+# ReadMe Gen
 
-    lksdjf
+    This is a basic readme generator
 
     Table of Contents:
-    sdjfhsd
+    1st: How it works, 2nd: Where to find me, 3rd: how to install
 
     Installation:
-    sdfd
+    Simple! Just download and run in node CLI
 
     Usage:
-    f
+    basic readme generator that takes more time than just typing it out
 
     License:
-    sdf
+    None
 
     Contributing members:
-    sdf
+    None
 
     Testing:
-    sd
+    None
 
-    If you have any questions:
-    d
-
+    If you have any questions please email me at 
+    jbrandonarnold@gmail.com
     

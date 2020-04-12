@@ -69,10 +69,11 @@ function init() {
       name: "test",
     },
     {
-      type: "input",
+      type: "confirm",
       message:
-        "Explain how you would like to receive questions about your project",
+        "Would you like to receive questions by email?",
       name: "questions",
+      default: true
     },
   ])
   .then(function (response) {
@@ -92,8 +93,8 @@ function init() {
     ${response.contributor}\n
     Testing:
     ${response.test}\n
-    If you have any questions:
-    ${response.questions}\n
+    If you have any questions please email me at 
+    ${response.email}
     `,
     function(err){
         if(err){
