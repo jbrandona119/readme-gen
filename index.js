@@ -1,9 +1,16 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
+const prompt = require('prompt');
+prompt.colors = false;
 
 function init() {
-
+  function addBadge(){
+    if (`${response.badge}`){
+      [![`${projectTitle}`]("https://circleci.com/gh/circleci/circleci-docs.svg?style=svg")]("https://circleci.com/gh/circleci/circleci-docs");
+      }
+    }
+  console.log("Answer the following questions to create a README.md")
   inquirer.prompt([
     {
       type: "input",
@@ -27,7 +34,7 @@ function init() {
     },
     {
       type: "confirm",
-      message: "Would you like to include a badge?",
+      message: "Would you like to include a PayPal donation badge?",
       name: "badge",
       default: true,
     },
@@ -53,39 +60,49 @@ function init() {
     },
     {
       type: "input",
-      message: "How would you like a contributor to help?",
+      message: "List the contributors here:",
       name: "contributor",
     },
     {
       type: "input",
-      message: "How would you like tests updated?",
-      name: "username",
+      message: "How would you like people to test?",
+      name: "test",
     },
     {
       type: "input",
       message:
         "Explain how you would like to receive questions about your project",
-      name: "username",
+      name: "questions",
     },
   ])
   .then(function (response) {
     console.log(response.username);
-    fs.writeFile('README.txt',
-    `${response.projectTitle}\n
-    
-    
-    
-    
-    
-    
-    
+    fs.writeFile('README.md',
+    `${'# '+ response.projectTitle}\n
+    ${response.description}\n
+    Table of Contents:
+    ${response.tableOfContents}\n
+    Installation:
+    ${response.installation}\n
+    Usage:
+    ${response.usage}\n
+    License:
+    ${response.license}\n
+    Contributing members:
+    ${response.contributor}\n
+    Testing:
+    ${response.test}\n
+    If you have any questions:
+    ${response.questions}\n
     `,
     function(err){
         if(err){
             return console.log(err);
         } console.log("README has been generated");
-    }
+    },
     )}
-  )
+  );
+ 
 }
+
 init();
